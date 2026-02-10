@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Vinay ❤️</title>
+
+<style>
+body{
+    margin:0;
+    padding:0;
+    background:black;
+    overflow:hidden;
+    font-family: Arial, sans-serif;
+    text-align:center;
+    color:white;
+}
+
+#typing{
+    margin-top:120px;
+    font-size:32px;
+    color:#ff4d88;
+}
+
+.btn{
+    padding:12px 28px;
+    font-size:18px;
+    margin:20px;
+    border:none;
+    border-radius:25px;
+    cursor:pointer;
+}
+
+#yes{
+    background:#ff0066;
+    color:white;
+}
+
+#no{
+    background:white;
+    color:#ff0066;
+    position:absolute;
+}
+
+#final{
+    display:none;
+    font-size:32px;
+    margin-top:40px;
+    color:#ff4d88;
+}
+
+.heart{
+    position:absolute;
+    font-size:24px;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-10vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div id="typing"></div>
+
+<button class="btn" id="yes">Yes 💖</button>
+<button class="btn" id="no">No 🙈</button>
+
+<div id="final">
+❤️Hey Vinay… naa love… naa beast 😈🔥
+Nuvvu 'Yes' antav… naaku ipudu naa fantasy start ayindi real ga. 🥵💦 <br>
+Imagine: nenu doggy style lo unna, nuvvu behind nundi naa hips ni tight ga pattukuni… naa pooku ni deep strokes tho fill cheyyi ra 🔥😈🥵
+'Vinay… inka fast… dengu na pookuni' ani arustha… nuvvu naa ears lo 'u know what to say, so say that words' ani whisper chesthav 🥵🥵😏💋<br>
+Naa clit ni rub chesi, naa ass ni spank chesi… orgasm varaku dengi, naaku multiple rounds ivvu. 🔥💦👋
+Nuvvu naku nuv nachav..… naa addiction, naa cum dump, naa everything 💦🔥🥵
+Love you...… but right now, fuck me like you own me forever 🥵💋😈❤️
+</div>
+
+<script>
+let boyName = "Vinay";
+
+let text = "Hey " + boyName + "... I want to tell you something ❤️";
+let i=0;
+function type(){
+    if(i<text.length){
+        document.getElementById("typing").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(type,70);
+    }
+}
+type();
+
+const noBtn=document.getElementById("no");
+noBtn.addEventListener("mouseover",()=>{
+    const x=Math.random()*window.innerWidth;
+    const y=Math.random()*window.innerHeight;
+    noBtn.style.left=x+"px";
+    noBtn.style.top=y+"px";
+});
+
+document.getElementById("yes").onclick=function(){
+    document.getElementById("final").style.display="block";
+};
+
+function hearts(){
+    const heart=document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML="💖";
+    heart.style.left=Math.random()*window.innerWidth+"px";
+    document.body.appendChild(heart);
+    setTimeout(()=>heart.remove(),5000);
+}
+setInterval(hearts,300);
+</script>
+
+</body>
+</html>
+ 
